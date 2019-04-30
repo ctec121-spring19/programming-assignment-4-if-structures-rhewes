@@ -24,20 +24,27 @@ def coffeeProcessor():
     priceOfCoffee = 16.50
 
     # get number of pounds from user
-    quantity = evaluate(input("How many pounds of coffee would you like to order? )
+    # added end quote
+    # added an ending paren
+    # shortened evaluate to eval
+    quantity = eval(input("How many pounds of coffee would you like to order? "))
     
     # Check number of pounds ordered
     # If less than or equal to 10 pounds we must charge for shipping
+    # added a colon to "else" on line 36
     if quantity <= 10:
         shippingPerPound = .76
-    else
-        shippingPerPound = 0      
+    else:
+        shippingPerPound = 0    
 
     # Calculate cost of order
-    costOfOrder = (quantity * priceOfCoffee) + (quntity * shippingPerPound) + overHead
+    # fixed the spelling of quantity
+    costOfOrder = (quantity * priceOfCoffee) + (quantity * shippingPerPound) + overHead
 
     # Print result
-    print(The cost of the order is:",costOfOrder)
+    # added beginning quote to print command
+    print("The cost of the order is:",costOfOrder)
 
 # start the program
-gocoffeeProcessor()
+# removed "go" from end of function
+coffeeProcessor()
